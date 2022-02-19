@@ -50,6 +50,9 @@
         // Overlay layers (TMS)
         var lyr = L.tileLayer('./{z}/{x}/{y}.png', {tms: 1, opacity: 0.6, attribution: "", minZoom: 14, maxZoom: 19});
 
+        // Overlay layers (TMS)
+        var lyr1 = L.tileLayer('./general_tiles/{z}/{x}/{y}.png', {tms: 1, opacity: 0.6, attribution: "", minZoom: 14, maxZoom: 19});
+
         // Map
         var map = L.map('map', {
             center: [55.82109029011325, 37.47675505818471],
@@ -60,7 +63,7 @@
         });
 
         var basemaps = {"OpenStreetMap": osm, "GoogleSattelite": googleSat, "white": white}
-        var overlaymaps = {"Layer": lyr}
+        var overlaymaps = {"Сводный план": lyr, "Генеральный план": lyr1}
 
         // Title
         // var title = L.control();
